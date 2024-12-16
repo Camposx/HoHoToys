@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <a href="{{ route('home') }}"> <img src="{{ config('image.xmasTree')}}" alt="Christmas Tree"></a>
-    <a href="{{ route('elf') }}"> <img src="{{ config('image.elf')}}" alt="Elf"></a>
+    <a href="{{ route('home') }}"> <img src="{{ config('images.xmasTree')}}" alt="Christmas Tree"></a>
+    <a href="{{ route('elf') }}"> <img src="{{ config('images.elf')}}" alt="Elf"></a>
 
     @foreach ($children as $child)
         <div class="card" style="width: 18rem;">
@@ -19,5 +19,5 @@
             </div>
         </div>
     @endforeach
-    
+
 @endsection
