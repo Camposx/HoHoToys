@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\Child;
+use App\Models\Children;
 use Illuminate\Http\Request;
 
 class ChildController extends Controller
@@ -13,7 +13,7 @@ class ChildController extends Controller
      */
     public function index()
     {
-        $children = Child::all();
+        $children = Children::all();
 
         return view('children', compact('children'));
     }
@@ -23,7 +23,7 @@ class ChildController extends Controller
      */
     public function show(string $id)
     {
-        $chil = Child::findOrFail($id);
+        $chil = Children::findOrFail($id);
 
         return view('showChild', compact('child'));
     }
