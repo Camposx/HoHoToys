@@ -15,7 +15,7 @@ class ToyController extends Controller
     {
         $toys = Toy::all();
 
-        return view('toys', compact('toys'));
+        return view('elf', compact('toys'));
     }
 
     /**
@@ -25,6 +25,6 @@ class ToyController extends Controller
     {
         $toy = Toy::findOrFail($id);
 
-        return view('showToy', compact('toy'));
+        return view('elfShow', compact('toy'));
     }
 }

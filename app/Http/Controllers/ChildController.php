@@ -15,7 +15,7 @@ class ChildController extends Controller
     {
         $children = Children::all();
 
-        return view('children', compact('children'));
+        return view('santa', compact('children'));
     }
 
     /**
@@ -25,6 +25,6 @@ class ChildController extends Controller
     {
         $chil = Children::findOrFail($id);
 
-        return view('showChild', compact('child'));
+        return view('santaShow', compact('child'));
     }
 }
