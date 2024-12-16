@@ -4,6 +4,9 @@
     <a href="{{ route('home') }}"> <img src="{{ config('images.xmasTree')}}" alt="Christmas Tree"></a>
     <a href="{{ route('elf') }}"> <img src="{{ config('images.elf')}}" alt="Elf"></a>
 
+    <h2>Santa view</h2>
+    <h3>Children list</h3>
+
     @foreach ($children as $child)
         <div class="card" style="width: 18rem;">
             <img src="{{$child->photo}}" class="card-img-top" alt="Photo of {{$child->name}} {{$child->surname}}">

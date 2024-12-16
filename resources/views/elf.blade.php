@@ -4,6 +4,9 @@
     <a href="{{ route('home') }}"> <img src="{{ config('images.xmasTree')}}" alt="Christmas Tree"></a>
     <a href="{{ route('santa') }}"> <img src="{{ config('images.santa')}}" alt="Santa claus"></a>
 
+    <h2>Elfs view</h2>
+    <h3>Toys list</h3>
+
     @foreach ($toys as $toy)
         <div class="card" style="width: 18rem;">
             <img src="{{$toy->photo}}" class="card-img-top" alt="Photo of {{$toy->name}}">
@@ -19,5 +22,4 @@
             </div>
         </div>
     @endforeach
-
 @endsection
