@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('child_toy', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->unsignedBigInteger('id_child');
+            $table->unsignedBigInteger('id_toy');
+           
         });
     }
 

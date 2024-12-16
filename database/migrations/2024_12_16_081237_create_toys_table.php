@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('toys', function (Blueprint $table) {
             $table->id();
+            $table->text('name');
+            $table->text('photo');
+            $table->text('description');
+            $table->enum('min_age', [0,7,12]);
             $table->timestamps();
         });
     }
