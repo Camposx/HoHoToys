@@ -21,7 +21,7 @@ class ChildFactory extends Factory
             "surname" => $this->faker->lastName(),
             "photo" => $this->faker->imageUrl(),
             "age" => $this->faker->numberBetween(0,18),
-            "naughty" => $this->faker->boolval(),
+            "naughty" => $this->faker->boolean(),
         ];
     }
 }
