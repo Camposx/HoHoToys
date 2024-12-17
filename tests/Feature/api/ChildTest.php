@@ -27,4 +27,23 @@ class ChildTest extends TestCase
             ->assertJsonFragment(['surname' => $child->surname]);
     }
 
+    public function test_CheckIfSantaCanStoreChildsWithApi(){
+        $data = [
+            'name' => 'Pepito',
+            'surname' => 'Grillo',
+            'photo' => 'photoLink',
+            'age' => 6,
+            'naughty' => false
+        ];
+
+        $response = $this->post(route('apiSantaStore'), $data);
+        $response->assertStatus(200)
+            ->assertJsonFragment(['name' => 'Pepito']);
+
+        $response = $this->get(route('apiSantaHome'));
+        $response->assertStatus(200)
+            ->assertJsonCount(1);
+    }
+
+   
 }
