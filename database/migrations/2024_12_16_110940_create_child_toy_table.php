@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('child_toy', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_child');
-            $table->foreign('id_child')->references('id')->on('children')->onDelete('cascade');
-            $table->unsignedBigInteger('id_toy');
-            $table->foreign('id_toy')->references('id')->on('toys')->onDelete('cascade');
+            $table->unsignedBigInteger('child_id');
+            $table->foreign('child_id')->references('id')->on('children')->onDelete('cascade');
+            $table->unsignedBigInteger('toy_id');
+            $table->foreign('toy_id')->references('id')->on('toys')->onDelete('cascade');
         });
     }
 
