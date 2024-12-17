@@ -3,7 +3,6 @@
 @section('content')
     <a href="{{ route('santa') }}"> <img src="{{ config('images.santaHat')}}" alt="Santa claus Hat"></a>
 
-    <h2>Elfs view</h2>
     <h3>Toys list</h3>
 
     @foreach ($toys as $toy)
