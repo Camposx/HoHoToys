@@ -5,3 +5,13 @@
 @import url(home.css);
 @import url(elf.css);
 @import url(santa.css);
+
+#app{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer{
+    margin-top: auto;
+}
