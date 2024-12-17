@@ -6,7 +6,7 @@ use App\Http\Controllers\ChildController;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
 Route::get('/santa', [ChildController::class, 'index'])->name('santa');
 Route::get('/santa/{id}', [ChildController::class, 'show'])->name('santaShow');

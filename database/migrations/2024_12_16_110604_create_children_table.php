@@ -11,12 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('toys', function (Blueprint $table) {
+        Schema::create('children', function (Blueprint $table) {
             $table->id();
             $table->text('name');
+            $table->text('surname');
             $table->text('photo');
-            $table->text('description');
-            $table->enum('min_age', [0,7,12]);
+            $table->integer('age');
+            $table->boolean(column: 'naughty');
             $table->timestamps();
         });
     }
@@ -26,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('toys');
+        Schema::dropIfExists('children');
     }
 };
