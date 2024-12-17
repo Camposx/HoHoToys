@@ -1,0 +1,16 @@
+main {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--beige);
+    flex-wrap: wrap;
+}
+
+main img {
+    transition: transform 1.5s ease;
+}
+
+main img:hover {
+    transform: scale(1.1);
+}
