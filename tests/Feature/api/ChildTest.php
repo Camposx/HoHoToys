@@ -19,5 +19,12 @@ class ChildTest extends TestCase
             ->assertJsonCount(2);
     }
 
-    
+    public function test_CheckIfSantaCanShowOneChildFromJson(){
+        $child = Child::factory()->create();
+
+        $response = $this->get(route('apiSantaShow', $child->id));
+        $response->assertStatus(200)
+            ->assertJsonFragment(['surname' => $child->surname]);
+    }
+
 }
