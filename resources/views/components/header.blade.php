@@ -1,4 +1,5 @@
-<div>
-    <h1>HoHoToys</h1>
+<header>
+    <h1>(HoHo</h1>
     <a href="{{ route('home') }}"> <img src="{{ config('images.xmasTree')}}" alt="Christmas Tree"></a>
-</div>
+    <h1>Toys)</h1>
+</header>
