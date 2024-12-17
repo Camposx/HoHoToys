@@ -23,7 +23,7 @@ class ChildController extends Controller
      */
     public function show(string $id)
     {
-        $chil = Child::findOrFail($id);
+        $child = Child::findOrFail($id);
 
         return view('santaShow', compact('child'));
     }
