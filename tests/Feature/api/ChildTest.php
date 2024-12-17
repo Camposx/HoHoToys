@@ -68,5 +68,14 @@ class ChildTest extends TestCase
             ->assertJsonFragment(['name' => 'Modified Name']);
     }
 
-    
+    public function test_CheckIfSantaCanDeleteChildWithApi(){
+        Child::factory(2)->create();
+
+        $response = $this->delete(route('apiSantaDestroy', 1));
+        $this->assertDatabaseCount('children', 1);
+
+        $response = $this->get(route('apiSantaHome'));
+        $response->assertStatus(200)
+            ->assertJsonCount(1);
+    }
 }
