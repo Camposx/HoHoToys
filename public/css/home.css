@@ -1,0 +1,19 @@
+.homeSection{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 62dvh;
+}
+
+
+
+.homeSection img{
+    height: 25rem;
+    transition: transform 1.5s ease;
+
+}
+
+.homeSection img:hover {
+    transform: scale(1.1);
+}

@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Christmas Squad';
+    src: url('./fonts/christmas_squad/Christmas\ Squad\ -\ Personal\ Use.otf');
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--darkRed);
+    color: var(--beige);
+    padding-right: 3rem;
+}
+
+h1 {
+    font-family: 'Christmas Squad';
+    font-size: 110px;
+}
+
+header img {
+    width: 180px;
+    position: relative;
+    top: 35px;
+    transition: transform 1.5s ease;
+}
+
+header img:hover {
+    transform: scale(1.2);
+}

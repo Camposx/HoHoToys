@@ -1,0 +1,23 @@
+
+.card-text{
+    overflow-y: scroll;
+    height: 10rem;
+}
+
+.hats{
+    height: 8rem;
+    
+}
+
+.cardSection{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.headingPage h3{
+    text-align: center;
+    
+
+}
