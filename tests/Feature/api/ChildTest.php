@@ -45,5 +45,28 @@ class ChildTest extends TestCase
             ->assertJsonCount(1);
     }
 
-   
+    public function test_CheckIfSantaCanUpdateChildWithApi(){
+        $child = Child::factory()->create();
+        $response = $this->get(route('apiSantaHome'));
+
+        $response->assertStatus(200)
+            ->assertJsonCount(1)
+            ->assertJsonFragment(['name' => $child->name]);
+
+        $response = $this->put(route('apiSantaUpdate', $child->id),
+        [
+            'name' => 'Modified Name',
+            'surname' => $child->surname,
+            'photo' => $child->photo,
+            'age' => $child->age,
+            'naughty' => $child->naughty
+        ]);
+
+        $response = $this->get(route('apiSantaHome'));
+        $response->assertStatus(200)
+            ->assertJsonCount(1)
+            ->assertJsonFragment(['name' => 'Modified Name']);
+    }
+
+    
 }
