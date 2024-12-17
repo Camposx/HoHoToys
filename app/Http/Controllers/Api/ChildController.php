@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Models\Children;
+use App\Models\Child;
 use Illuminate\Http\Request;
 
 class ChildController extends Controller
@@ -13,7 +13,7 @@ class ChildController extends Controller
      */
     public function index()
     {
-        $children = Children::all();
+        $children = Child::all();
 
         return response()->json($children, 200);
     }
@@ -23,7 +23,7 @@ class ChildController extends Controller
      */
     public function store(Request $request)
     {
-        $child = Children::create([
+        $child = Child::create([
             'name' => $request->name,
             'surname' => $request->surname,
             'photo' => $request->photo,
@@ -41,7 +41,7 @@ class ChildController extends Controller
      */
     public function show(string $id)
     {
-        $child = Children::findOrFail($id);
+        $child = Child::findOrFail($id);
 
         return response()->json($child, 200);
     }
@@ -51,7 +51,7 @@ class ChildController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $child = Children::findOrFail($id);
+        $child = Child::findOrFail($id);
 
         $child->update([
             'name' => $request->name,
@@ -71,7 +71,7 @@ class ChildController extends Controller
      */
     public function destroy(string $id)
     {
-        $child = Children::findOrFail($id);
+        $child = Child::findOrFail($id);
         $child->delete();
     }
 }
