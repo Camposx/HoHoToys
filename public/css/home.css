@@ -1,16 +1,19 @@
-main {
+.homeSection{
     display: flex;
-    flex: 1;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--beige);
     flex-wrap: wrap;
+    min-height: 62dvh;
 }
 
-main img {
+
+
+.homeSection img{
+    height: 25rem;
     transition: transform 1.5s ease;
+
 }
 
-main img:hover {
+.homeSection img:hover {
     transform: scale(1.1);
 }
